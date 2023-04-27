@@ -1,0 +1,4 @@
+SELECT imie, nazwisko, miasto FROM `klient` WHERE miasto = "Legionowo" OR miasto = "Warszawa";
+SELECT nazwa FROM produkty WHERE cena_brutto > 500;
+SELECT kategorie.nazwa_kategorii, AVG(produkty.cena_brutto) FROM kategorie  INNER JOIN produkty ON kategorie.id_kat = produkty.id_kat GROUP BY kategorie.nazwa_kategorii;
+SELECT zamowienia.id_zam, zamowienia.ilosc, zamowienia.wartosc, produkty.nazwa FROM zamowienia INNER JOIN produkty ON produkty.id_prod = zamowienia.id_prod WHERE zamowienia.id_klient = 2;

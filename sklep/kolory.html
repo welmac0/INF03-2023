@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomocnik CSS</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div class="kontener">
+        <div class="container">
+            <header><h1>Pomocnik CSS</h1></header>
+            <header><ul>
+                <li><a href="kolory.html">Kolory</a></li>
+                <li><a href="czcionki.html">Czcionki</a></li>
+                <li><a href="style.html">Style CSS</a></li>
+                <li><a href="https://www.w3schools.com/css/">Pomoc</a></li>
+            </ul></header>
+        </div>
+        <div class="glowny">
+            <h2>Podaj skladowa H koloru w kodzie HSL</h2>
+            <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+            <img src="kolory.jpg" alt="Przestrzeń barw HSL">
+            <br>
+            <input type="number" id="pole" max="360" placeholder="0 - 360"> <button id="gen" onclick="onclicke()">Generuj Palete</button>
+            <table>
+                <tr><td colspan="4">Kolor glowny</td></tr>
+                <tr>
+                    <td>Kolor 2</td>
+                    <td>Kolor 3</td>
+                    <td>Kolor 4</td>
+                    <td>Kolor 5</td>
+                </tr>
+            </table>
+        </div>
+        <footer>Autor: 002</footer>
+    </div>
+</body>
+</html>
+<script>
+    function onclicke () {
+        let H = document.getElementById("pole").value
+        let tds = document.getElementsByTagName("td")
+        const s = [100, 80, 60, 40, 20]
+        for (let i = 0; i < tds.length; i++) {
+            tds[i].style.backgroundColor = `hsl(${H}, ${s[i]}%, 50%)`
+        }
+    }
+</script>

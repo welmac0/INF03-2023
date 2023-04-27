@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+.kontener {
+    font-family: sans-serif;
+    background-color: linen;
+    color: #222;
+    width: 90%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.glowny {
+    padding: 20px;
+}
+
+table {
+    margin: 40px;
+}
+
+table td {
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+li {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    border-bottom: 1px solid white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
