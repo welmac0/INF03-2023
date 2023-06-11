@@ -16,7 +16,7 @@
             <h4>Uzytkownicy</h4>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "dane4");
-
+$conn->query("SET NAMES UTF8");
 if (!$conn) {
     die("Connection failed");
 }
@@ -43,6 +43,7 @@ if ($result->num_rows > 0) {
             <hr>
             <?php
 $conn = mysqli_connect("localhost", "root", "", "dane4");
+$conn->query('SET NAMES UTF8');
 
 if (!$conn) {
     die("Connection failed");

@@ -1,0 +1,4 @@
+INSERT INTO czytelnicy (imie, nazwisko, kod) VALUES ('Anna', 'Michalak', 'an05mi');
+SELECT imie, nazwisko FROM czytelnicy;
+SELECT tytul FROM ksiazki INNER JOIN autorzy ON autorzy.id = ksiazki.id_autor WHERE autorzy.nazwisko LIKE 'Fredro';
+SELECT nazwisko, sum(ksiazki.id) as 'ilosc' FROM autorzy INNER JOIN ksiazki ON ksiazki.id_autor = autorzy.id GROUP BY nazwisko;
